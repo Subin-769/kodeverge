@@ -5,7 +5,7 @@ export const caseStudies = [
     title: "CloudPOS – Revolutionizing Retail",
     description:
       "A cloud-based point-of-sale system that transformed how retailers manage inventory, sales, and customer relationships.",
-    image: "/case1.png",
+    image: "/images/image1.png",
     category: "Retail Tech",
     client: "CloudPOS Inc.",
     duration: "8 months",
@@ -26,7 +26,7 @@ export const caseStudies = [
     title: "HealthTrack – Patient Management",
     description:
       "An integrated healthcare platform streamlining patient records, appointments, and telemedicine consultations.",
-    image: "/case1.png",
+    image: "/images/image2.png",
     category: "Healthcare",
     client: "HealthTrack Medical",
     duration: "12 months",
@@ -53,7 +53,7 @@ export const caseStudies = [
     title: "FinWise – Digital Banking Platform",
     description:
       "A comprehensive digital banking solution enabling seamless transactions, account management, and financial planning.",
-    image: "/case1.png",
+    image: "/images/image3.png",
     category: "FinTech",
     client: "FinWise Bank",
     duration: "18 months",
@@ -80,7 +80,7 @@ export const caseStudies = [
     title: "EduLearn – E-Learning Ecosystem",
     description:
       "A comprehensive learning management system with interactive courses, progress tracking, and certification programs.",
-    image: "/case1.png",
+    image: "/images/image4.png",
     category: "EdTech",
     client: "EduLearn Academy",
     duration: "10 months",
@@ -107,7 +107,7 @@ export const caseStudies = [
     title: "LogiPro – Supply Chain Management",
     description:
       "An end-to-end logistics platform optimizing warehouse operations, fleet management, and delivery tracking.",
-    image: "/case1.png",
+    image: "/images/image5.png",
     category: "Logistics",
     client: "LogiPro Solutions",
     duration: "14 months",
@@ -134,7 +134,7 @@ export const caseStudies = [
     title: "ShopEase – E-Commerce Platform",
     description:
       "A feature-rich online marketplace with personalized recommendations, seamless checkout, and vendor management.",
-    image: "/case1.png",
+    image: "/images/image6.png",
     category: "E-Commerce",
     client: "ShopEase Retail",
     duration: "9 months",
@@ -161,7 +161,7 @@ export const caseStudies = [
     title: "SmartOffice – Workspace Management",
     description:
       "An intelligent office management system with desk booking, meeting room scheduling, and visitor management.",
-    image: "/case1.png",
+    image: "/images/image7.png",
     category: "PropTech",
     client: "SmartOffice Corp",
     duration: "6 months",
@@ -188,7 +188,7 @@ export const caseStudies = [
     title: "GreenTrack – Sustainability Platform",
     description:
       "A comprehensive carbon footprint tracking and sustainability reporting platform for enterprises.",
-    image: "/case1.png",
+    image: "/images/image8.png",
     category: "CleanTech",
     client: "GreenTrack Global",
     duration: "11 months",
@@ -215,7 +215,7 @@ export const caseStudies = [
     title: "TravelBuddy – Travel Booking Platform",
     description:
       "An all-in-one travel platform with flight booking, hotel reservations, and personalized itinerary planning.",
-    image: "/case1.png",
+    image: "/images/image0.png",
     category: "Travel Tech",
     client: "TravelBuddy Inc.",
     duration: "13 months",

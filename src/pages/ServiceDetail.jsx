@@ -39,7 +39,7 @@ function HeroSection() {
           {/* Right Image */}
           <div className="flex-1">
             <img
-              src="/image14.png"
+              src="/images/image 14.png"
               alt="Dashboard Analytics"
               className="w-full h-auto"
             />

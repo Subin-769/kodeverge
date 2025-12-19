@@ -1,20 +1,24 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import image1 from "../assets/Images/image1.png";
-import image2 from "../assets/Images/image2.png";
-import image3 from "../assets/Images/image3.png";
-import image4 from "../assets/Images/image4.png";
-import image5 from "../assets/Images/image5.png";
-import image6 from "../assets/Images/image6.png";
-import image7 from "../assets/Images/image7.png";
-import image8 from "../assets/Images/image8.png";
-import image0 from "../assets/Images/image0.png";
-import rapidIcon from "../assets/SVG/rapid.svg";
-import teamIcon from "../assets/SVG/team.svg";
-import innovativeIcon from "../assets/SVG/innovative.svg";
-import growthIcon from "../assets/SVG/growth.svg";
-import focusIcon from "../assets/SVG/focus.svg";
-import agileIcon from "../assets/SVG/agile.svg";
+
+// Import images from public directory
+const image1 = "/images/image1.png";
+const image2 = "/images/image2.png";
+const image3 = "/images/image3.png";
+const image4 = "/images/image4.png";
+const image5 = "/images/image5.png";
+const image6 = "/images/image6.png";
+const image7 = "/images/image7.png";
+const image8 = "/images/image8.png";
+const image0 = "/images/image0.png";
+
+// Import SVG icons as React components
+import RapidIcon from "../assets/SVG/rapid.svg?react";
+import TeamIcon from "../assets/SVG/team.svg?react";
+import InnovativeIcon from "../assets/SVG/innovative.svg?react";
+import GrowthIcon from "../assets/SVG/growth.svg?react";
+import FocusIcon from "../assets/SVG/focus.svg?react";
+import AgileIcon from "../assets/SVG/agile.svg?react";
 
 // Mock services data
 const servicesData = [
@@ -138,32 +142,32 @@ function ServicesSubmenu() {
 function WhyChooseUs() {
   const features = [
     {
-      icon: rapidIcon,
+      icon: RapidIcon,
       title: "Rapid Delivery",
       description: "Agile development processes ensure quick time-to-market without compromising quality."
     },
     {
-      icon: teamIcon,
+      icon: TeamIcon,
       title: "Expert Team",
       description: "Seasoned professionals with deep expertise across multiple technologies."
     },
     {
-      icon: innovativeIcon,
+      icon: InnovativeIcon,
       title: "Innovation Focus",
       description: "Stay ahead of the curve with cutting-edge technologies and innovative approaches."
     },
     {
-      icon: growthIcon,
+      icon: GrowthIcon,
       title: "Client-Centric Approach",
       description: "Your success is our priority. We tailor solutions to meet your specific business objectives."
     },
     {
-      icon: focusIcon,
+      icon: FocusIcon,
       title: "Security First",
       description: "Enterprise-grade security practices integrated into every solution we deliver."
     },
     {
-      icon: agileIcon,
+      icon: AgileIcon,
       title: "Scalable Solutions",
       description: "Build for today, scale for tomorrow with architecture designed for growth."
     }
@@ -195,7 +199,7 @@ function WhyChooseUs() {
 
               <div className="relative p-8 text-center">
                 <div className="w-16 h-16 flex items-center justify-center mb-6 mx-auto rounded-full bg-gradient-to-br from-[#0067B0]/10 to-[#30AA68]/10 group-hover:scale-110 transition-transform duration-500">
-                  <img src={feature.icon} alt={feature.title} className="w-10 h-10" />
+                  <feature.icon className="w-10 h-10" />
                 </div>
 
                 <h3 className="text-2xl font-bold mb-4 text-gray-800 group-hover:bg-gradient-to-r group-hover:from-[#0067B0] group-hover:to-[#30AA68] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">

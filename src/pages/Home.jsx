@@ -2,11 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { MessageCircle, Pencil, Code, ExternalLink, Search, Wrench, RefreshCw, ArrowRight, User } from "lucide-react";
 
 // Image paths from public directory
-const MLImage = "/Images/ML.png";
-const CloudImage = "/Images/Cloud.png";
-const CyberImage = "/Images/cyber.png";
-const DevelopmentImage = "/Images/development.png";
-const GradRect = "/Images/grad rect.png";
+const MLImage = "/images/ML.png";
+const CloudImage = "/images/Cloud.png";
+const CyberImage = "/images/cyber.png";
+const DevelopmentImage = "/images/development.png";
+const GradRect = "/images/grad rect.png";
 
 const topics = [
   {
@@ -177,7 +177,7 @@ export default function Home() {
       {/* Hero Section with Video */}
       <div className="relative w-full h-screen">
         <video
-          src="/src/assets/Videos/tech.mp4"
+          src="/videos/Tech.mp4"
           autoPlay
           loop
           muted

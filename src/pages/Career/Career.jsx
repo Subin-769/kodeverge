@@ -1,21 +1,25 @@
 import React, { useState } from 'react';
-import career from "../../assets/Images/career.png";
-import car1 from "../../assets/Images/car1.png";
-import car2 from "../../assets/Images/car2.png";
-import car3 from "../../assets/Images/car3.png";
-import car4 from "../../assets/Images/car4.png";
-import car5 from "../../assets/Images/car5.png";
-import car6 from "../../assets/Images/car6.png";
-import innovationIcon from "../../assets/SVG/innovation.svg";
-import spiritIcon from "../../assets/SVG/spirit.svg";
-import agileIcon from "../../assets/SVG/agile.svg";
-import focusIcon from "../../assets/SVG/focus.svg";
-import benefitIcon from "../../assets/SVG/benefit.svg";
-import growthIcon from "../../assets/SVG/growth.svg";
-import balanceIcon from "../../assets/SVG/balance.svg";
-import webImg from "../../assets/Images/web.png";
-import appImg from "../../assets/Images/app.png";
-import saasImg from "../../assets/Images/saas.png";
+
+// Import images from public directory
+const career = "/images/career.png";
+const car1 = "/images/car1.png";
+const car2 = "/images/car2.png";
+const car3 = "/images/car3.png";
+const car4 = "/images/car4.png";
+const car5 = "/images/car5.png";
+const car6 = "/images/car6.png";
+const webImg = "/images/web.png";
+const appImg = "/images/app.png";
+const saasImg = "/images/saas.png";
+
+// Import SVG icons as React components
+import InnovationIcon from "../../assets/SVG/innovation.svg?react";
+import SpiritIcon from "../../assets/SVG/spirit.svg?react";
+import AgileIcon from "../../assets/SVG/agile.svg?react";
+import FocusIcon from "../../assets/SVG/focus.svg?react";
+import BenefitIcon from "../../assets/SVG/benefit.svg?react";
+import GrowthIcon from "../../assets/SVG/growth.svg?react";
+import BalanceIcon from "../../assets/SVG/balance.svg?react";
 
 export default function Career() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -48,17 +52,17 @@ export default function Career() {
   
   const cultureValues = [
     {
-      icon: innovationIcon,
+      icon: InnovationIcon,
       title: "Innovation Driven",
       description: "We believe in the power of innovative thinking where every idea matters, and innovation is not just part of our work, it's at the heart of everything we do."
     },
     {
-      icon: spiritIcon,
+      icon: SpiritIcon,
       title: "Collaborative Spirit",
       description: "Our team thrives on collaboration, fostering open communication, mutual respect, and harnessing diverse experiences and expertise to excel."
     },
     {
-      icon: agileIcon,
+      icon: AgileIcon,
       title: "Agile Excellence",
       description: "We prioritize adaptability and continuous improvement, empowering our teams to quickly respond to challenges and drive impactful innovation at every stage."
     }
@@ -66,22 +70,22 @@ export default function Career() {
   
   const whyJoinUs = [
     {
-      icon: focusIcon,
+      icon: FocusIcon,
       title: "Innovation Focus",
       description: "Work with cutting-edge tech in web development, mobile apps, AI/ML cybersecurity, and cloud solutions"
     },
     {
-      icon: benefitIcon,
+      icon: BenefitIcon,
       title: "Competitive Benefits",
       description: "Comprehensive packages including health coverage, performance bonuses, learning budgets, and flexible work arrangements."
     },
     {
-      icon: growthIcon,
+      icon: GrowthIcon,
       title: "Career Growth",
       description: "Clear advancement paths, mentorship programs, and leadership opportunities in our rapidly growing company."
     },
     {
-      icon: balanceIcon,
+      icon: BalanceIcon,
       title: "Work-Life Balance",
       description: "Flexible schedules, remote work options, unlimited PTO, and a culture that respects your personal time and well-being."
     }
@@ -153,7 +157,7 @@ export default function Career() {
                 
                 <div className="relative p-10 text-center">
                   <div className="w-16 h-16 flex items-center justify-center mb-6 mx-auto rounded-full bg-gradient-to-br from-[#0067B0]/10 to-[#30AA68]/10 group-hover:scale-110 transition-transform duration-500">
-                    <img src={value.icon} alt={value.title} className="w-10 h-10" />
+                    <value.icon className="w-10 h-10" />
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-gray-800 group-hover:bg-gradient-to-r group-hover:from-[#0067B0] group-hover:to-[#30AA68] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                     {value.title}
@@ -339,11 +343,7 @@ export default function Career() {
                 <div className="relative mb-6">
                   <div className="absolute inset-0 bg-gradient-to-br from-[#0067B0] to-[#30AA68] rounded-full blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
                   <div className="relative w-20 h-20 flex items-center justify-center rounded-full bg-gradient-to-br from-[#0067B0] to-[#30AA68] shadow-lg group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 transform">
-                    <img 
-                      src={item.icon} 
-                      alt={item.title} 
-                      className="w-10 h-10 filter brightness-0 invert" 
-                    />
+                    <item.icon className="w-10 h-10 filter brightness-0 invert" />
                   </div>
                 </div>
                 

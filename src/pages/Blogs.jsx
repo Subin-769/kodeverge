@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 
 
-// Import images
-// Import images
-const image9 = "/Images/image9.png";
-const image10 = "/Images/image10.png";
-const image11 = "/Images/image11.png";
-const image12 = "/Images/image12.png";
-const image13 = "/Images/image13.png";
+// Import images from public directory
+const image9 = "/images/image9.png";
+const image10 = "/images/image10.png";
+const image11 = "/images/image11.png";
+const image12 = "/images/image12.png";
+const image13 = "/images/image13.png";
 import CardGrid from "../components/CardGrid";
 
 // Blog data with imported images

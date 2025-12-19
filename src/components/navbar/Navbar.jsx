@@ -91,7 +91,7 @@ export default function Navbar() {
             <button
               className={`font-semibold transition-colors ${resourcesOpen
                 ? "text-[#4DADF0]"
-                : "text-gray-300 hover:text-[#4DADF0]"
+                : "text-black hover:text-[#4DADF0]"
                 }`}
               onClick={() => {
                 setResourcesOpen(!resourcesOpen);

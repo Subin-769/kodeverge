@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import aboutVideo from "../assets/Videos/aboutus.mp4";
 
 export default function AboutUs() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -130,7 +129,7 @@ export default function AboutUs() {
               >
                 <div className="relative w-full h-full">
                   <video
-                    src={aboutVideo}
+                    src="/videos/aboutus.mp4"
                     autoPlay
                     loop
                     muted

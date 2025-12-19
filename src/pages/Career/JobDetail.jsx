@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import career from "../../assets/Images/career.png";
+
+const career = "/images/career.png";
 
 export default function JobDetail() {
   const [selectedLocation, setSelectedLocation] = useState('All Locations');

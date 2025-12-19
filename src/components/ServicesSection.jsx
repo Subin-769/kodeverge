@@ -10,7 +10,7 @@ export default function ServicesSection() {
           <div className="order-2 lg:order-1">
             <div className="rounded-lg overflow-hidden shadow-lg">
               <img
-                src="/images/services-left.jpg"
+                src="/images/image1.png"
                 alt="Services visual"
                 className="w-full h-auto object-cover"
               />

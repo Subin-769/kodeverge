@@ -8,6 +8,7 @@ const CyberImage = "/images/cyber.png";
 const DevelopmentImage = "/images/development.png";
 const GradRect = "/images/grad rect.png";
 
+
 const topics = [
   {
     category: "Data",
@@ -738,8 +739,8 @@ export default function Home() {
               <div
                 key={index}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${index === activeIndex
-                    ? "bg-[#30AA68] scale-150"
-                    : "bg-gray-500/30"
+                  ? "bg-[#30AA68] scale-150"
+                  : "bg-gray-500/30"
                   }`}
               />
             ))}
@@ -925,132 +926,131 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <>
 
-      {/* Hero Section with wavy borders */}
-      <div className="relative">
-        {/* Gradient background section with wavy borders */}
-        <div className="relative">
-          {/* Top wavy border */}
-          <div className="absolute top-0 left-0 right-0 z-10">
-            <svg
-              viewBox="0 0 1440 60"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-full"
-            >
+        {/* Hero Section with wavy borders */}
+        <section className="relative bg-white">
+          <div
+            className="relative"
+            style={{
+              background: 'linear-gradient(to right, #1e3a5f 0%, #14b8a6 50%, #10b981 100%)'
+            }}
+          >
+            {/* Top wavy border */}
+            <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
+              <svg className="relative block w-full h-40" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                  d="M0,60 Q300,0 600,60 T1200,60 L1200,0 L0,0 Z"
+                  className="fill-white"
+                />
+              </svg>
+            </div>
+
+            {/* Image positioned top right */}
+            <div className="absolute top-0 right-0 w-3/5 max-w-2.5xl z-10">
+              <img
+                src="public/images/laptop.png"
+                alt="Laptop dashboard preview"
+                className="w-full h-auto"
+              />
+
+            </div>
+
+            <div className="max-w-7xl mx-auto px-8 py-32">
+              <div className="max-w-xl">
+                <div className="text-white space-y-6">
+                  <h1 className="text-4xl md:text-4xl font-bold leading-tight">
+                    Build Smarter, <span className="text-emerald-300">Move Faster</span>
+                  </h1>
+
+                  <p className="text-m text-gray-100 leading-relaxed text-justify">
+                    At Kodeverge, we empower businesses to design and deliver the digital solutions of the future.
+                    By blending startup agility with enterprise-grade precision and deep technical expertise,
+                    we help you turn bold ideas into powerful, scalable realities.
+                  </p>
+
+                  <button className="bg-transparent border-2 border-emerald-300 text-emerald-300 hover:bg-emerald-300 hover:text-slate-900 px-8 py-3 rounded font-semibold inline-flex items-center gap-2 transition-all mt-4">
+                    GET STARTED
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom wavy border */}
+            <div className="absolute bottom-0 translate-y-[50px] left-0 w-full overflow-hidden leading-none rotate-180">             <svg className="relative block w-full h-48" viewBox="0 0 1200 120" preserveAspectRatio="none">
               <path
-                d="M0 60V30C240 10 480 0 720 10C960 20 1200 40 1440 30V60H0Z"
-                fill="white"
+                d="M0,60 Q300,0 600,60 T1200,60 L1200,0 L0,0 Z"
+                className="fill-white"
               />
             </svg>
+            </div>
           </div>
+        </section>
 
-          {/* Image positioned top right */}
-          <div className="absolute top-0 right-0 w-1/2 h-full hidden lg:block">
-            <img
-              src={MLImage}
-              alt="Technology illustration"
-              className="w-full h-full object-cover opacity-20"
-            />
-          </div>
+        {/* Tech Stack Section */}
+        <section className="py-24 px-4 bg-white overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-20">
+              <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                Your Stack, <span className="text-teal-600">Our Expertise</span>
+              </h2>
+              <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+                No matter the language, framework, or platform—Kode Verge has the technical depth to deliver
+                high-quality solutions tailored to your specific stack and business goals.
+              </p>
+            </div>
 
-          <div className="bg-gradient-to-r from-[#0067B0] to-[#30AA68] pt-24 pb-32">
-            <div className="container mx-auto px-6">
-              {/* Left content */}
-              <div className="max-w-2xl relative z-10">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
-                  Build Smarter, Move Faster
-                </h2>
-                <p className="text-white/90 text-lg md:text-xl leading-relaxed mb-8">
-                  At Kodeverge, we empower businesses to design and deliver the digital solutions of the future. By blending startup agility with enterprise-grade precision and deep technical expertise, we help you turn bold ideas into powerful, scalable realities.
-                </p>
-                <button className="px-8 py-4 bg-white text-[#0067B0] font-bold rounded-full hover:bg-gray-100 transition-colors inline-flex items-center gap-3 text-base shadow-lg">
-                  GET STARTED
-                  <ArrowRight className="w-5 h-5" />
-                </button>
+            {/* Row 1 */}
+            <div className="relative mb-16">
+              <div className="flex gap-20 animate-scroll">
+                {[...technologiesRow1, ...technologiesRow1].map((tech, idx) => (
+                  <div
+                    key={idx}
+                    className="flex-shrink-0 text-gray-300 text-4xl md:text-5xl font-bold whitespace-nowrap"
+                  >
+                    {tech}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Row 2 */}
+            <div className="relative">
+              <div className="flex gap-20 animate-scroll-reverse">
+                {[...technologiesRow2, ...technologiesRow2].map((tech, idx) => (
+                  <div
+                    key={idx}
+                    className="flex-shrink-0 text-gray-300 text-4xl md:text-5xl font-bold whitespace-nowrap"
+                  >
+                    {tech}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
 
-          {/* Bottom wavy border */}
-          <div className="absolute bottom-0 left-0 right-0 z-10">
-            <svg
-              viewBox="0 0 1440 60"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-full"
-            >
-              <path
-                d="M0 0V30C240 50 480 60 720 50C960 40 1200 20 1440 30V0H0Z"
-                fill="white"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
+          <style>{`
+          @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
 
-      {/* Tech Stack Section */}
-      <div className="bg-white py-20">
-        <div className="container mx-auto px-6">
-          {/* Header */}
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1A1A1A] mb-4">
-              Your Stack, Our Expertise
-            </h2>
-            <p className="text-[#616161] text-base md:text-lg">
-              No matter the language, framework, or platform—Kode Verge has the technical depth to deliver high-quality solutions tailored to your specific stack and business goals.
-            </p>
-          </div>
+          @keyframes scroll-reverse {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+          }
 
-          {/* Scrolling Tech Stack - Row 1 */}
-          <div className="overflow-hidden mb-4">
-            <div className="flex animate-scroll whitespace-nowrap">
-              {technologiesRow1.map((tech, idx) => (
-                <div
-                  key={`row1-${idx}`}
-                  className="inline-flex items-center justify-center px-8 py-4 mx-3 bg-gray-100 rounded-full text-[#1A1A1A] font-semibold text-lg hover:bg-gradient-to-r hover:from-[#30AA68] hover:to-[#0067B0] hover:text-white transition-all duration-300 cursor-pointer"
-                >
-                  {tech}
-                </div>
-              ))}
-              {/* Duplicate for seamless loop */}
-              {technologiesRow1.map((tech, idx) => (
-                <div
-                  key={`row1-dup-${idx}`}
-                  className="inline-flex items-center justify-center px-8 py-4 mx-3 bg-gray-100 rounded-full text-[#1A1A1A] font-semibold text-lg hover:bg-gradient-to-r hover:from-[#30AA68] hover:to-[#0067B0] hover:text-white transition-all duration-300 cursor-pointer"
-                >
-                  {tech}
-                </div>
-              ))}
-            </div>
-          </div>
+          .animate-scroll {
+            animation: scroll 30s linear infinite;
+          }
 
-          {/* Scrolling Tech Stack - Row 2 (Reverse Direction) */}
-          <div className="overflow-hidden">
-            <div className="flex animate-scroll-reverse whitespace-nowrap">
-              {technologiesRow2.map((tech, idx) => (
-                <div
-                  key={`row2-${idx}`}
-                  className="inline-flex items-center justify-center px-8 py-4 mx-3 bg-gray-100 rounded-full text-[#1A1A1A] font-semibold text-lg hover:bg-gradient-to-r hover:from-[#30AA68] hover:to-[#0067B0] hover:text-white transition-all duration-300 cursor-pointer"
-                >
-                  {tech}
-                </div>
-              ))}
-              {/* Duplicate for seamless loop */}
-              {technologiesRow2.map((tech, idx) => (
-                <div
-                  key={`row2-dup-${idx}`}
-                  className="inline-flex items-center justify-center px-8 py-4 mx-3 bg-gray-100 rounded-full text-[#1A1A1A] font-semibold text-lg hover:bg-gradient-to-r hover:from-[#30AA68] hover:to-[#0067B0] hover:text-white transition-all duration-300 cursor-pointer"
-                >
-                  {tech}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-      </div>
-
+          .animate-scroll-reverse {
+            animation: scroll-reverse 30s linear infinite;
+          }
+        `}</style>
+        </section>
+      </>
       {/* Testimonials Section */}
       <div className="bg-gray-50 py-20">
         <div className="container mx-auto px-6">
@@ -1101,8 +1101,8 @@ export default function Home() {
                 key={index}
                 onClick={() => setCurrentTestimonial(index)}
                 className={`h-3 rounded-full transition-all ${currentTestimonial === index
-                    ? 'bg-[#0067B0] w-8'
-                    : 'bg-gray-300 w-3 hover:bg-gray-400'
+                  ? 'bg-[#0067B0] w-8'
+                  : 'bg-gray-300 w-3 hover:bg-gray-400'
                   }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />

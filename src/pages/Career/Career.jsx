@@ -104,12 +104,21 @@ export default function Career() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
         </div>
         
-        <div className="relative z-10 h-full flex flex-col justify-end pb-20" style={{ maxWidth: '1450px', margin: '0 auto', padding: '0 24px' }}>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 max-w-4xl">
+       <div
+  className="relative z-10 h-full flex flex-col justify-center"
+  style={{
+    maxWidth: '1450px',
+    margin: '0 auto',
+    padding: '0 24px',
+    paddingTop: '120px'
+  }}
+>
+
+<h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-5 max-w-4xl">
             <span className="text-white">Shape the Future with </span>
             <span className="bg-gradient-to-r from-[#30AA68] to-[#0067B0] bg-clip-text text-transparent">KodeVerge</span>
           </h1>
-          <p className="text-white text-lg md:text-xl font-normal max-w-2xl leading-relaxed mb-10">
+<p className="text-white text-lg md:text-xl font-normal max-w-xl leading-relaxed mb-8">
             Join a team of passionate innovators building tomorrow's technology solutions where you can create impact and see ideas come to life.
           </p>
           <a 

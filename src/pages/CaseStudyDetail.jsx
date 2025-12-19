@@ -55,7 +55,7 @@ const CaseStudyDetail = () => {
           </div>
 
           {/* Hero Image */}
-          <div className="max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
+          <div className="max-w-5.5xl mx-auto overflow-hidden">
             <img
               src={caseStudy.image}
               alt={caseStudy.title}

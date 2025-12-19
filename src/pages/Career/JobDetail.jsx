@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+
 
 const career = "/images/career.png";
 
@@ -6,6 +8,8 @@ export default function JobDetail() {
   const [selectedLocation, setSelectedLocation] = useState('All Locations');
   const [selectedDepartment, setSelectedDepartment] = useState('All Departments');
   const [selectedExperience, setSelectedExperience] = useState('All Levels');
+  const navigate = useNavigate();
+
 
   // Sample job data
   const jobListings = [
@@ -111,14 +115,14 @@ export default function JobDetail() {
       {/* ========== Hero Section ========== */}
       <section className="relative w-full" style={{ height: '50vh' }}>
         <div className="absolute inset-0 overflow-hidden">
-          <img 
-            src={career} 
-            alt="Careers" 
+          <img
+            src={career}
+            alt="Careers"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
         </div>
-        
+
         <div className="relative z-10 container mx-auto px-6 h-full flex flex-col justify-center items-center text-center" style={{ maxWidth: '1450px' }}>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
             <span className="text-white">Build with us, </span>
@@ -224,7 +228,7 @@ export default function JobDetail() {
             <div className="divide-y divide-gray-100">
               {filteredJobs.length > 0 ? (
                 filteredJobs.map((job, index) => (
-                  <div 
+                  <div
                     key={job.id}
                     className="grid grid-cols-12 gap-4 px-8 py-6 hover:bg-gradient-to-r hover:from-[#0067B0]/5 hover:to-[#30AA68]/5 transition-all duration-300 group"
                   >
@@ -251,9 +255,13 @@ export default function JobDetail() {
                       {job.experience}
                     </div>
                     <div className="col-span-2 flex justify-center">
-                      <button className="px-6 py-2 bg-gradient-to-r from-[#0067B0] to-[#30AA68] text-white font-semibold rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 text-sm">
-                        View Jobs
+                      <button
+                        onClick={() => navigate(`/career/jobs/${job.id}`)}
+                        className="px-6 py-2 bg-gradient-to-r from-[#0067B0] to-[#30AA68] text-white font-semibold rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 text-sm"
+                      >
+                        View Job
                       </button>
+
                     </div>
                   </div>
                 ))
@@ -277,25 +285,14 @@ export default function JobDetail() {
             <p className="text-lg text-[#616161] mb-8 max-w-2xl mx-auto">
               We're always looking for talented individuals to join our team. Send us your resume and we'll keep you in mind for future opportunities.
             </p>
-            <button className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-[#0067B0] to-[#30AA68] text-white font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 group">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              <span>Submit Your Resume</span>
-              <svg 
-                className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M13 7l5 5m0 0l-5 5m5-5H6" 
-                />
-              </svg>
-            </button>
+            <button
+      onClick={() => navigate("/career/jobs/apply")}
+      className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-[#0067B0] to-[#30AA68] text-white font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 group"
+    >
+      Submit Your Resume
+    </button>
+
+
           </div>
         </div>
       </section>
